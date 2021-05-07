@@ -48,7 +48,7 @@ async def update(ctx):
     datet = datetime.datetime.today()
 
     data = refresh()
-    requests.get("http://127.0.0.1:5000/update?token="+WTOKEN, params=data)
+    requests.get("https://memeshubapi.herokuapp.com/update?token="+WTOKEN, params=data)
     print("DATA POSTED")
 
 bot.run(TOKEN)
