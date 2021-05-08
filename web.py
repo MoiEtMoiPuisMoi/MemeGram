@@ -36,8 +36,8 @@ def update():
     servers = request.args.get('servers')
     users = request.args.get('users')
     if token == WTOKEN:
-        jfile['servers'] = servers
-        jfile['users'] = users
+        jfile["servers"] = servers
+        jfile["users"] = users
         return jfile
     else:
         return {"error":"ACCES DENIED"}
