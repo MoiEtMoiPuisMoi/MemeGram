@@ -15,10 +15,19 @@ function copy(value){
 
 function discord(){
 	copy("Moi#5013")
-	Swal.fire("Discord Name Copied");
+    Swal.fire({
+        icon: 'success',
+        title: 'Discord ID Copied',
+        text: 'Discord ID was copied!',
+        button: 'Noice'
+    })
 }
 
 function email(){
 	copy("mathias@dupeux.net")
-	Swal.fire("Email Copied");
+	Swal.fire({
+        icon: 'success',
+        title: 'Email Copied',
+        text: 'Email was copied!'
+    })
 }
