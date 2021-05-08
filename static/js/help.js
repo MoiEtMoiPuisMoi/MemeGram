@@ -28,6 +28,5 @@ function email(){
 	Swal.fire({
         icon: 'success',
         title: 'Email Copied',
-        text: 'Email was copied!'
-    })
+        text: 'Email was copied!'})
 }
