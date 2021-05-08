@@ -15,10 +15,10 @@ function copy(value){
 
 function discord(){
 	copy("Moi#5013")
-	alert("Discord ID copied")
+	Swal.alert("Discord Name Copied");
 }
 
 function email(){
 	copy("mathias@dupeux.net")
-    Swal.fire('Boutton Clicked')
+	Swal.alert("Email Copied");
 }
