@@ -53,6 +53,6 @@ async def update(ctx):
     data = refresh()
     requests.get("https://memeshubapi.herokuapp.com/update?token="+WTOKEN, params=data)
     print("DATA POSTED")
-    await ctx.send("Data posted")
+    await ctx.send("Data Posted")
 
 bot.run(TOKEN)
