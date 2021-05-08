@@ -1,8 +1,7 @@
 import discord
 import os
-from discord.ext import commands
+from discord.ext import commands, tasks
 from dotenv import load_dotenv
-import datetime
 import requests
 
 load_dotenv(dotenv_path='config/.env')
@@ -42,11 +41,8 @@ def refresh():
 async def on_ready():
     print('I am ready')
 
-
-@bot.command()
-async def update(ctx):
-    datet = datetime.datetime.today()
-
+@tasks.loop(hours=1)
+async def update():
     data = refresh()
     requests.get("https://memeshubapi.herokuapp.com/update?token="+WTOKEN, params=data)
     print("DATA POSTED")

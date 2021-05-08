@@ -1,7 +1,6 @@
-
 import os
 from dotenv import load_dotenv
-from flask import Flask, request
+from flask import Flask, request, render_template
 
 load_dotenv(dotenv_path='config/.env')
 
@@ -23,7 +22,12 @@ WTOKEN = os.getenv('UPDATE_TOKEN')
 jfile = {"servers":"DATA-NOT-UPDATED", "users":"DATA-NOT-UPDATED"}
 
 @app.route('/')
+@app.route('/index')
 def index():
+    return render_template('index.html', users=jfile["users"], servers=jfile["servers"])
+
+@app.route('/api')
+def api():
     return jfile
 
 @app.route('/update')
