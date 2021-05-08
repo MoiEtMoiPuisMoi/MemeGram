@@ -1,5 +1,5 @@
 function why(){
-	prompt('Why you do this ?')
+	prompt("Why you do this ?")
 }
 
 
@@ -15,10 +15,10 @@ function copy(value){
 
 function discord(){
 	copy("Moi#5013")
-	Swal.alert("Discord Name Copied");
+	Swal.fire("Discord Name Copied");
 }
 
 function email(){
 	copy("mathias@dupeux.net")
-	Swal.alert("Email Copied");
+	Swal.fire("Email Copied");
 }
