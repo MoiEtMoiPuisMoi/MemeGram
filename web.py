@@ -19,7 +19,7 @@ WTOKEN = os.getenv('UPDATE_TOKEN')
 #                                                       #
 #########################################################
 
-jfile = {"servers":"DATA-NOT-UPDATED", "users":"DATA-NOT-UPDATED"}
+jfile = {"servers":"None", "users":"None"}
 
 @app.route('/')
 @app.route('/index')
