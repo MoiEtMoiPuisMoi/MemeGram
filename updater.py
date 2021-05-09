@@ -41,12 +41,6 @@ def refresh():
 async def on_ready():
     print('I am ready')
 
-@tasks.loop(hours=1)
-async def updatet():
-    data = refresh()
-    requests.get("https://memeshubapi.herokuapp.com/update?token="+WTOKEN, params=data)
-    print("DATA POSTED")
-
 
 @bot.command()
 async def update(ctx):
