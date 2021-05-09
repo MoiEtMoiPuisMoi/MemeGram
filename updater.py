@@ -41,7 +41,6 @@ def refresh():
 async def on_ready():
     print('I am ready')
 
-
 @bot.command()
 async def update(ctx):
     data = refresh()
