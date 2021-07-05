@@ -19,28 +19,10 @@ WTOKEN = os.getenv('UPDATE_TOKEN')
 #                                                       #
 #########################################################
 
-jfile = {"servers":"None", "users":"None"}
-
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('index.html', users=jfile["users"], servers=jfile["servers"])
-
-@app.route('/api')
-def api():
-    return jfile
-
-@app.route('/update')
-def update():
-    token = request.args.get('token')
-    servers = request.args.get('servers')
-    users = request.args.get('users')
-    if token == WTOKEN:
-        jfile["servers"] = servers
-        jfile["users"] = users
-        return jfile
-    else:
-        return {"error":"ACCES DENIED"}
+    return render_template('index.html')
 
 if __name__ == "__main__":
     app.run()
