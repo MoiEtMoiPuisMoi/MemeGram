@@ -1,10 +1,6 @@
-import colorama
 from flask import Flask, render_template
 import random
 from meme import Meme
-from datetime import datetime
-from colorama import init
-init()
 
 
 app = Flask(__name__)
@@ -19,10 +15,6 @@ app = Flask(__name__)
 #  |_|  |_| \___/ |_|  |_||_|  |____/  \___/ |_||____/  #
 #                                                       #
 #########################################################
-
-def SUCCESS():
-    now = datetime.now()
-    print(colorama.Fore.GREEN+"["+str(datetime.strptime("%d/%m/%Y %H:%M:%S"))+"Load Page succes - 200"+colorama.Fore.RESET)
 
 @app.route('/', methods=['GET'])
 def index():
