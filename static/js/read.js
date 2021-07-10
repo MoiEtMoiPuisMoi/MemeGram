@@ -27,43 +27,13 @@ imageSection.addEventListener("dblclick", function (e) {
 });
 
 var nextIndex = 1;
-var imgList = imageSection.querySelectorAll('img');
-function chageImage(direction) {
-	return function (e) {
-		e.preventDefault();
 
-		console.log(nextIndex);
-
-		imgList.forEach(function (item) {
-			return item.classList.remove('show');
-		});
-		var img = imageSection.querySelector(".img-" + nextIndex);
-		img.classList.add('show');
-
-		if (nextIndex === 0) {
-			ctrlLeft.classList.add("hide");
-		} else {
-			ctrlLeft.classList.remove("hide");
-		}
-
-		if (nextIndex === imgList.length - 1) {
-			ctrlRight.classList.add("hide");
-		} else {
-			ctrlRight.classList.remove("hide");
-		}
-
-		if (direction === 0) {
-			--nextIndex;
-			if (nextIndex < 0) {
-				nextIndex = 1;
-			}
-		} else if (direction === 1) {
-			++nextIndex;
-			if (nextIndex > imgList.length - 1) {
-				nextIndex = imgList.length - 2;
-			}
-		}
-	};
+document.onkeydown = function (event) {
+    switch (event.keyCode) {
+        case 39:
+            location.reload();
+            break;
+    }
 }
 
 ctrlRight.addEventListener("click", chageImage(1));
